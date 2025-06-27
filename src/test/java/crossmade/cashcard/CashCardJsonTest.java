@@ -45,5 +45,4 @@ public class CashCardJsonTest {
         assertThat(json.parseObject(expected).id()).isEqualTo(1000);
         assertThat(json.parseObject(expected).amount()).isEqualTo(67.89);
     }
-
 }
