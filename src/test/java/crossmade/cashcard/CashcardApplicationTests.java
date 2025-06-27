@@ -21,7 +21,6 @@ class CashCardApplicationTests {
 		ResponseEntity<String> response = restTemplate.getForEntity("/cashcards/99", String.class);
 
 		assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-		assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
 
 		DocumentContext documentContext = JsonPath.parse(response.getBody());
 		Number id = documentContext.read("$.id");
